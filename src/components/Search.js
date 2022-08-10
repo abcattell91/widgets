@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Search = () => {
-  const [term, setTerm] = useState('Programming React');
+  const [term, setTerm] = useState('React');
+  const [debouncedTerm, setDebouncedTerm] = useState(term)
   const [results, setResults] = useState([]);
 
   console.log(results)
@@ -29,13 +30,11 @@ const Search = () => {
           search();
         }
       }, 650)
-
-
       return() => {
         clearTimeout(timeoutId);
       };
     }
-  },[term]);
+  },[term, results.length]);
 
   const renderedResults = results.map((result ) => {
     return (
