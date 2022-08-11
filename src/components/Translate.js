@@ -14,6 +14,22 @@ const options = [
     label: 'Hindi',
     value: 'hi'
   },
+  {
+    label: 'French',
+    value: 'fr'
+  },
+  {
+    label: 'Dutch',
+    value: 'nl'
+  },
+  {
+    label: 'Croatian',
+    value: 'hr'
+  },
+  {
+    label: 'German',
+    value: 'de'
+  },
 ]
 
 const Translate = () => {
